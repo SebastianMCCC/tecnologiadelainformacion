@@ -1,0 +1,19 @@
+body {
+    background-color: lightblue;
+    background: #2A7B9B;
+background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(237, 83, 83, 1) 79%);
+}
+h1, h2, p {
+    text-align: center;
+    color: white;
+    text-align: center;
+     font-family: "Asimovian", sans-serif;
+}
+h1 {
+    font-size: 50px;
+    margin-top: 20px;
+}
+h2 {
+   font-family: "Satisfy", cursive;
+   font-size-adjust: 40px;
+}
