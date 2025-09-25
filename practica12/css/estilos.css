@@ -1,0 +1,41 @@
+html{
+    font-size: 16px;
+}
+
+body {
+    background-color: rgb(166, 19, 224);
+    color : rgb(255, 255, 255);
+    font-family: Arial, sans-serif;
+}
+h1 {
+    text-align: center;
+    margin-top:20px ;
+    font-size: 100px;
+}
+a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin: 0px auto;
+}
+a:hover {
+    background-color: aliceblue;    color: red;
+}
+p {
+    text-align: center;
+}
+h2 {
+    font-size: 4em;
+}
+#padre {
+    font-size: 20px;
+}
+h3 {
+    font-size: 2em;
+}
+li{
+    font-size: 30rem;
+}
