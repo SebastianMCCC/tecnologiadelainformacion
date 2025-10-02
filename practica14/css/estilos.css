@@ -1,0 +1,55 @@
+:root {
+    --color1: red;
+    --color2: blue;
+    --colortext: white;
+    --colordefondo: lightblue;
+    --color3: green;
+    --color4: yellow;
+    --color5: orange;
+}
+
+
+
+body {
+    background-color: var(--colordefondo);
+    display: flex;
+    
+    font-family: Arial;
+}
+#container {
+    display:flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 20px;
+    background-color: var(--color2);
+    border: 2px solid black;
+
+}
+.Cuadro {
+    background-color: white;
+    color: antiquewhite;
+    width: 100px;
+    height: 100px;
+    font-size: 4rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    gap : 10px;
+}
+.Cuadro:hover {
+    transform: scale(1.1);
+    background-color: blanchedalmond;
+    transition: 0.3s;
+    background-color: blanchedalmond;
+}
+.morado {
+    background-color: var(--color5);
+
+
+}
+.rosa {
+    background-color: pink;
+}
+
+
