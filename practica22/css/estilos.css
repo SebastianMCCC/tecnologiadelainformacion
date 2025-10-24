@@ -1,0 +1,11 @@
+:root {
+    color-scheme: light dark;
+}
+body {
+    color: light-dark(#333, #eee);
+    font-family: Arial, sans-serif;
+    background-color:  light-dark(#eee, #333);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
