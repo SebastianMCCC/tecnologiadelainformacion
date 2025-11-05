@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Menú</title>
+  <link rel="stylesheet" href="css/estilos.css" />
+</head>
+<body>
+  <!-- AUDIO -->
+  <audio id="audio-bienvenida" src="IMG/AUDIO GRATUITO PARA VENDER TAMALES.mp3" preload="auto"></audio>
+  <button id="playFallback" class="play-fallback" aria-hidden="true">▶ Reproducir audio</button>
+
+  <!-- MENSAJE DE INTRODUCCIÓN -->
+  <div class="intro-text">
+    <p><strong>Menú con imágenes interactivas y fácil acceso para todas las personas!</strong><br>
+    🎶 Reproduzca el audio para agarrar el ambiente 🎶</p>
+  </div>
+
+  <!-- VIDEO DE FONDO -->
+  <video id="video-fondo" autoplay muted loop playsinline>
+    <source src="IMG/FONDO ANIMADO MEXICO.mp4" type="video/mp4">
+  </video>
+  <div class="overlay"></div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <img class="logo" src="IMG/Gemini_Generated_Image_tj97wltj97wltj97.png" alt="Logo El Tamalito" />
+      <h1>Doña Letty, Cocina Tradicional</h1>
+      <p class="subtitle">Sabor y tradición — Tamales y bebidas calientes</p>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="content">
+
+    <!-- SECCIÓN TAMALES -->
+    <section class="card">
+      <h2>TAMALES</h2>
+      <div class="items">
+
+        <div class="item">
+          <div class="thumb" data-src="https://patijinich.com/es/wp-content/uploads/sites/3/2017/11/405-tamales-de-pollo-con-salsa-verde.jpg">
+            <img src="https://patijinich.com/es/wp-content/uploads/sites/3/2017/11/405-tamales-de-pollo-con-salsa-verde.jpg" alt="Tamal de Salsa Verde">
+          </div>
+          <div class="meta">
+            <strong>Tamal de Salsa Verde</strong> — Suave masa con pollo y salsa verde casera.
+            <span class="price">$24</span>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="thumb" data-src="https://quehagodecomerhoy.com/wp-content/uploads/2018/04/Tamales-Rojos.jpg">
+            <img src="https://quehagodecomerhoy.com/wp-content/uploads/2018/04/Tamales-Rojos.jpg" alt="Tamal de Salsa Roja">
+          </div>
+          <div class="meta">
+            <strong>Tamal de Salsa Roja</strong> — Carne de cerdo en adobo de chile rojo y especias.
+            <span class="price">$24</span>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="thumb" data-src="https://cheforopeza.com.mx/wp-content/uploads/2021/02/tamales-rosas.jpg">
+            <img src="https://cheforopeza.com.mx/wp-content/uploads/2021/02/tamales-rosas.jpg" alt="Tamal de Azúcar">
+          </div>
+          <div class="meta">
+            <strong>Tamal de Azúcar</strong> — Dulce, suave y con pasitas, perfecto como postre.
+            <span class="price">$16</span>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="thumb" data-src="https://www.cocinavital.mx/wp-content/uploads/2022/01/tamal-de-rajas-con-queso.jpg">
+            <img src="https://www.cocinavital.mx/wp-content/uploads/2022/01/tamal-de-rajas-con-queso.jpg" alt="Tamal de Rajas">
+          </div>
+          <div class="meta">
+            <strong>Tamal de Rajas</strong> — Relleno de queso jugoso y chile poblano.
+            <span class="price">$19</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BEBIDAS -->
+    <section class="card">
+      <h2>BEBIDAS CALIENTES</h2>
+      <div class="items">
+        <div class="item">
+          <div class="thumb" data-src="https://assets.tmecosys.com/image/upload/t_web_rdp_recipe_584x480_1_5x/img/recipe/ras/Assets/67920CC6-EDDD-43A0-9232-3010D7DF24AB/Derivates/57A173EC-D25A-4438-A481-FD40692F6C65.jpg">
+            <img src="https://assets.tmecosys.com/image/upload/t_web_rdp_recipe_584x480_1_5x/img/recipe/ras/Assets/67920CC6-EDDD-43A0-9232-3010D7DF24AB/Derivates/57A173EC-D25A-4438-A481-FD40692F6C65.jpg" alt="Champurrado">
+          </div>
+          <div class="meta">
+            <strong>Champurrado</strong> — Espeso, chocolatoso e ideal con tamales.
+            <span class="price">$23</span>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="thumb" data-src="https://mayacomunicacion.com.mx/wp-content/uploads/2023/12/Atole-de-garbanzo.jpeg">
+            <img src="https://mayacomunicacion.com.mx/wp-content/uploads/2023/12/Atole-de-garbanzo.jpeg" alt="Atole de Garbanzo">
+          </div>
+          <div class="meta">
+            <strong>Atole de Garbanzo</strong> — Caliente y nutritivo, con toque de canela.
+            <span class="price">$14</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- POSTRES -->
+    <section class="card">
+      <h2>POSTRES</h2>
+      <div class="items">
+        <div class="item">
+          <div class="thumb" data-src="https://www.azucardominomex.com/sites/azucardominomex_com/files/2022-09/Bun%20uelos%20tile.jpg">
+            <img src="https://www.azucardominomex.com/sites/azucardominomex_com/files/2022-09/Bun%20uelos%20tile.jpg" alt="Buñuelos">
+          </div>
+          <div class="meta">
+            <strong>Buñuelos</strong> — Crujientes con azúcar y canela.
+            <span class="price">$16</span>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="thumb" data-src="https://assets.tmecosys.com/image/upload/t_web_rdp_recipe_584x480/img/recipe/ras/Assets/A4F055C9-D340-4F2A-9015-6A2659851E84/Derivates/5b9a24d1-7748-4bfe-ba63-fb3e5f722db0.jpg">
+            <img src="https://assets.tmecosys.com/image/upload/t_web_rdp_recipe_584x480/img/recipe/ras/Assets/A4F055C9-D340-4F2A-9015-6A2659851E84/Derivates/5b9a24d1-7748-4bfe-ba63-fb3e5f722db0.jpg" alt="Arroz con Leche">
+          </div>
+          <div class="meta">
+            <strong>Arroz con Leche</strong> — Cremoso con canela y toque de vainilla.
+            <span class="price">$18</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REFRESCOS -->
+    <section class="card">
+      <h2>REFRESCOS</h2>
+      <div class="items">
+        <div class="item">
+          <div class="thumb" data-src="https://http2.mlstatic.com/D_NQ_NP_947188-MLM75531987367_042024-O.webp">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_947188-MLM75531987367_042024-O.webp" alt="Refrescos">
+          </div>
+          <div class="meta">
+            <strong>Refrescos</strong> — Coca-Cola, Jarritos, Sidral Mundet, Sprite (600 ml).
+            <span class="price">$25</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- MODAL -->
+  <div id="modal" class="modal" aria-hidden="true" role="dialog">
+    <div class="modal-panel" role="document">
+      <button id="modal-close" class="modal-close" aria-label="Cerrar">✕</button>
+      <img id="modal-img" src="" alt="">
+      <div id="modal-caption" class="modal-caption"></div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script>
+    const audio = document.getElementById('audio-bienvenida');
+    const playFallback = document.getElementById('playFallback');
+    audio.loop = false;
+    audio.volume = 0.8;
+
+    window.addEventListener('load', () => {
+      const p = audio.play();
+      if (p !== undefined) {
+        p.then(() => playFallback.style.display = 'none')
+        .catch(() => playFallback.style.display = 'block');
+      }
+    });
+
+    playFallback.addEventListener('click', () => {
+      audio.play().then(() => playFallback.style.display = 'none');
+    });
+
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modal-img');
+    const modalCaption = document.getElementById('modal-caption');
+    const modalClose = document.getElementById('modal-close');
+
+    document.querySelectorAll('.thumb').forEach(thumb => {
+      thumb.addEventListener('click', () => {
+        modalImg.src = thumb.dataset.src || thumb.querySelector('img').src;
+        modalImg.alt = thumb.querySelector('img').alt || '';
+        modalCaption.textContent = thumb.querySelector('img').alt;
+        modal.classList.add('open');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    modalClose.addEventListener('click', () => {
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    });
+
+    modal.addEventListener('click', e => { if (e.target === modal) modalClose.click(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') modalClose.click(); });
+  </script>
+</body>
+</html>
+</html>
