@@ -1,0 +1,284 @@
+:root {
+    --bg-main: #0b0f19;
+    --bg-sidebar: #151b2b;
+    --bg-card: rgba(21, 27, 43, 0.8);
+    --primary: #00f2ff;
+    --secondary: #7000ff;
+    --text-main: #e2e8f0;
+    --border: rgba(255,255,255,0.08);
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    overflow: hidden; 
+}
+
+h1, h2, h3, h4, h5 { font-family: 'Space Grotesk', sans-serif; }
+
+/* LAYOUT */
+.sidebar {
+    position: fixed;
+    width: 260px;
+    height: 100vh;
+    background: var(--bg-sidebar);
+    border-right: 1px solid var(--border);
+    padding: 20px;
+    z-index: 1000;
+}
+.main-content {
+    margin-left: 260px;
+    padding: 30px;
+    height: 100vh;
+    overflow-y: auto; /* Scroll solo en el contenido principal */
+}
+
+/* CARDS & GLASS */
+.glass-card {
+    background: var(--bg-card);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+.glow-border {
+    border: 1px solid var(--primary);
+    box-shadow: 0 0 10px rgba(0, 242, 255, 0.2);
+    padding: 8px 20px;
+    border-radius: 50px;
+}
+
+/* NAVIGATION */
+.nav-link { 
+    color: #94a3b8; 
+    cursor: pointer; 
+    margin-bottom: 5px; 
+    border-radius: 8px; 
+    padding: 10px 15px;
+    transition: all 0.3s;
+}
+.nav-link:hover, .nav-link.active { 
+    background: linear-gradient(90deg, rgba(0, 242, 255, 0.1) 0%, transparent 100%); 
+    color: var(--primary); 
+    border-left: 3px solid var(--primary);
+}
+
+/* KANBAN BOARD */
+.kanban-col {
+    background: rgba(255,255,255,0.03);
+    border-radius: 10px;
+    padding: 15px;
+    min-height: 400px;
+}
+.kanban-card {
+    background: #1e293b;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border-left: 3px solid var(--primary);
+    cursor: grab;
+    transition: transform 0.2s;
+}
+.kanban-card:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+
+/* TERMINAL HACKER */
+.terminal-window {
+    background: #000;
+    border: 1px solid #333;
+    border-radius: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    padding: 0;
+    overflow: hidden;
+    box-shadow: 0 10px 50px rgba(0, 255, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+.terminal-header {
+    background: #1a1a1a;
+    padding: 8px 15px;
+    border-bottom: 1px solid #333;
+}
+.dot { height: 10px; width: 10px; border-radius: 50%; display: inline-block; margin-right: 5px; }
+.terminal-body {
+    padding: 20px;
+    height: 300px;
+    overflow-y: auto;
+    color: #0f0;
+    font-size: 0.9em;
+}
+.blink { animation: blinker 1s linear infinite; }
+@keyframes blinker { 50% { opacity: 0; } }
+
+/* SKILL TREE */
+.btn-skill {
+    width: 100px; height: 100px;
+    border-radius: 50%;
+    border: 4px solid var(--bg-sidebar);
+    font-weight: bold;
+    transition: all 0.3s;
+    position: relative; z-index: 2;
+}
+.btn-skill.unlocked {
+    background-color: var(--primary);
+    color: #000;
+    box-shadow: 0 0 20px var(--primary);
+}
+.btn-skill.locked {
+    background-color: #334155;
+    color: #64748b;
+    cursor: not-allowed;
+}
+
+/* UTILS */
+.text-primary { color: var(--primary) !important; }
+.bg-primary { background-color: var(--primary) !important; }
+.fade-in { animation: fadeIn 0.4s ease-out; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+.d-none { display: none !important; }
+.form-control, .form-select { background-color: #0b0c10; border: 1px solid #45a29e; color: white; }
+.form-control:focus { background-color: #0b0c10; color: white; border-color: var(--primary); box-shadow: 0 0 10px rgba(0,242,255,0.2); }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--bg-main); }
+::-webkit-scrollbar-thumb { background: var(--bg-sidebar); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--primary); }
+/* =========================================
+   MÓVIL / TABLET RESPONSIVE (MEDIA QUERIES)
+   Transformación a Estilo "App Nativa"
+   ========================================= */
+
+@media (max-width: 992px) {
+    /* 1. ELIMINAR LAYOUT DE ESCRITORIO */
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: fixed;
+        bottom: 0;
+        top: auto;
+        left: 0;
+        border-right: none;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        z-index: 9999;
+        padding: 5px 0;
+        background: rgba(11, 15, 25, 0.95); /* Fondo casi opaco */
+        backdrop-filter: blur(15px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 -5px 20px rgba(0,0,0,0.5);
+    }
+
+    /* 2. OCULTAR ELEMENTOS QUE NO CABEN EN EL MENÚ INFERIOR */
+    .sidebar .brand, 
+    .sidebar .profile-mini, 
+    .sidebar .mt-auto,
+    .sidebar .system-status {
+        display: none !important;
+    }
+
+    /* 3. TRANSFORMAR MENÚ EN BARRA INFERIOR DE ICONOS */
+    .sidebar .nav {
+        flex-direction: row !important; /* Poner iconos en fila */
+        width: 100%;
+        justify-content: space-around;
+        margin-top: 0 !important;
+    }
+
+    .nav-link {
+        font-size: 1.4rem; /* Iconos más grandes para dedos */
+        padding: 10px;
+        margin: 0;
+        border-left: none !important; /* Quitar borde lateral activo */
+        border-top: 3px solid transparent; /* Poner borde superior activo */
+        border-radius: 0;
+        color: #64748b;
+    }
+
+    /* Indicador activo en móvil (línea arriba) */
+    .nav-link.active {
+        background: transparent;
+        color: var(--primary);
+        border-top: 3px solid var(--primary);
+        transform: translateY(-5px); /* Pequeño salto al activar */
+    }
+
+    /* Ocultar texto de los links en móvil (Solo Iconos) */
+    .nav-link i {
+        margin-right: 0;
+    }
+    /* Truco: Asumiendo que el texto está suelto, lo ocultamos visualmente si quisieras
+       pero como en tu HTML el texto está dentro del <a>, mejor dejamos solo el icono visible
+       ajustando el tamaño de fuente a 0 para el texto y restaurándolo para el icono i */
+    .nav-link {
+        font-size: 0; /* Oculta texto */
+    }
+    .nav-link i {
+        font-size: 1.5rem; /* Restaura tamaño icono */
+        display: block;
+    }
+
+    /* 4. AJUSTAR CONTENIDO PRINCIPAL */
+    .main-content {
+        margin-left: 0; /* Quitar margen izquierdo */
+        margin-bottom: 80px; /* Espacio para que la barra inferior no tape contenido */
+        padding: 15px;
+        height: auto;
+        overflow-y: visible; /* Scroll natural del móvil */
+    }
+
+    body {
+        overflow: auto; /* Permitir scroll en el body en móviles */
+    }
+
+    /* 5. HEADER MÓVIL */
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    header .d-flex {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    #pageTitle {
+        font-size: 1.8rem;
+    }
+
+    /* 6. AJUSTES ESPECÍFICOS DE VISTAS */
+    
+    /* Kanban: Hacer que se vea uno debajo de otro */
+    .kanban-col {
+        min-height: auto;
+        margin-bottom: 20px;
+    }
+    
+    /* Gráficos: Altura fija para que no se aplasten */
+    #liveChart {
+        height: 250px !important;
+    }
+
+    /* Terminal: Ajustar al ancho de pantalla */
+    .terminal-window {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    /* Árbol de Habilidades: Ajustar tamaño */
+    .btn-skill {
+        width: 80px;
+        height: 80px;
+        font-size: 0.8rem;
+    }
+    
+    /* Notificaciones: Moverlas arriba para que no estorben al menú */
+    .toast-container {
+        bottom: 80px !important; /* Arriba de la barra de navegación */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+    }
+}
